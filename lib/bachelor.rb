@@ -15,7 +15,7 @@ def get_contestant_name(data, occupation)
   data.each do |season, array|
     array.each do |people|
       people.each do |key, value|
-binding.pry
+#binding.pry
         if value == occupation
           return people["name"]
         end
@@ -55,6 +55,7 @@ def get_average_age_for_season(data, season)
   count = 0
   data[season].each do |hash|
     hash.each do |key, value|
+      binding.pry
       if key == "age"
         count += 1
         age += value.to_f
